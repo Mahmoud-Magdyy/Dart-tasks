@@ -1,7 +1,7 @@
 
 import 'dart:io';
 void main(){
- print("hello git");
+ print(5+9);
 
 
 
