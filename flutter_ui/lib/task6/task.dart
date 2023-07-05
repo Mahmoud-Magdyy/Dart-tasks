@@ -13,7 +13,7 @@ class BusinessCard extends StatelessWidget {
             child: Scaffold(
               backgroundColor: Colors.deepOrange,
           appBar: AppBar(
-            title: const Text("BusinessCard"),
+            title: const Text("Business Card"),
             backgroundColor: Colors.black,
           ),
           body:  Center(
