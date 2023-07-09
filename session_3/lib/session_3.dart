@@ -1,22 +1,14 @@
-
 import 'dart:io';
-import 'dart:math';
+
+import 'human.dart';
+
 void main(){
-   print(power(3,3));
+
+Human mahmoud = Human(hairColor: 'red', hight: 75, width: 20);
+
+  
+mahmoud.setNumberOfArms(1);
+  print(mahmoud.getNumberOfArms());
+
 
 }
- 
-num power (num num1,num num2){
-  return  pow(3, 3); 
-}
-//named
-// num power ({required num num1,required num num2}){
-//   return  pow(num1,num2 ); 
-// }
-
-//opt
-// num power (num num1, [num num2=5]){
-//   return  pow(num1,num2 ); 
-// }
-
-
