@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/task7/task1.dart';
+import 'package:flutter_ui/task8/task.dart';
 
 void main(){
 runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: InteractiveWidgets(),
+      home: App(),
     );
   }
 }

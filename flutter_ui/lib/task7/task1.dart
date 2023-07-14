@@ -10,8 +10,8 @@ import '../task6/task.dart';
 // ignore: must_be_immutable
 class InteractiveWidgets extends StatelessWidget {
   InteractiveWidgets({super.key});
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  // TextEditingController emailController = TextEditingController();
+  // TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class InteractiveWidgets extends StatelessWidget {
           child: Column(
             children: [
               TextFormField(
-                controller: emailController,
+                // controller: emailController,
                 decoration: const InputDecoration(
                     hintText: 'Email', border: OutlineInputBorder()),
               ),
@@ -35,7 +35,7 @@ class InteractiveWidgets extends StatelessWidget {
               ),
               TextFormField(
                 obscureText: true,
-                controller: passwordController,
+                // controller: passwordController,
                 decoration: const InputDecoration(
                     hintText: 'Password', border: OutlineInputBorder()),
               ),
@@ -45,12 +45,12 @@ class InteractiveWidgets extends StatelessWidget {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context){
                     
                    
-                    if(emailController.text=='flutter@gmail.com'&&passwordController.text=='upacademy'){
-                      return BusinessCard();
-                    }
-                    else{
+                    // if(emailController.text=='flutter@gmail.com'&&passwordController.text=='upacademy'){
+                    //   return BusinessCard();
+                    // }
+                    
                       return Center(child: Text('ERROR'),);
-                    }
+                    
                     
                   }));
                 },

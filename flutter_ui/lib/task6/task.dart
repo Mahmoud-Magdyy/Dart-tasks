@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 
 
-void main() {
-  runApp(BusinessCard());
-}
+// void main() {
+//   runApp(BusinessCard());
+// }
 
 class BusinessCard extends StatelessWidget {
+  String email;
+  String password;
+  String phone;
+   BusinessCard(this.email,this.password,this.phone,{super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'This Is My Business Card',
         home: SafeArea(
             child: Scaffold(
-              backgroundColor: Colors.deepOrange,
+              backgroundColor: Colors.blue,
           appBar: AppBar(
             title: const Text("Business Card"),
             backgroundColor: Colors.black,
@@ -67,10 +72,10 @@ class BusinessCard extends StatelessWidget {
               ),
 
               
-              child:const  Row(children: [
+              child: Row(children: [
                 Icon(Icons.phone),
                 SizedBox(width: 15,),
-                Text('01112128654',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold))
+                Text(phone,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold))
                ]
                
                
@@ -91,18 +96,47 @@ class BusinessCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(50)
               
               ),
-              child:const  Row(children: [
+              child:  Row(children: [
                 Icon(Icons.email),
                 SizedBox(width: 15,),
-                Text('mahmoudmagdy20002@gmail.com',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))
+                Text(email,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))
+               ]
+               
+               
+               ),
+                
+               
+              )
+              ,
+              const SizedBox(
+                  height: 10,
+                ),
+              Container(
+              width: 350,
+              height: 50, 
+              padding: const EdgeInsets.all(10.0),
+              
+              decoration: BoxDecoration(
+                
+              color: Colors.white,  
+                
+              borderRadius: BorderRadius.circular(50)
+              
+              ),
+
+              
+              child: Row(children: [
+                Icon(Icons.lock),
+                SizedBox(width: 15,),
+                Text(password,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold))
                ]
                
                
                ), 
-              )
-              ,
+              ),
               
             ],
+            
             
              
           ) 
