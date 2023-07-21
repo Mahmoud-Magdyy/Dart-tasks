@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/task6/task.dart';
+import '../../../core/utils/app_strings.dart';
 
-class WhastApp extends StatelessWidget {
-  WhastApp({super.key});
+class WhatssApp extends StatelessWidget {
+  WhatssApp({super.key});
   bool isIcons = false;
 
   var Sbox = const SizedBox(

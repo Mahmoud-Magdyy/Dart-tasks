@@ -1,0 +1,7 @@
+import 'package:flutter/material.dart';
+
+void pushMethod(BuildContext context, Widget screen) {
+  Navigator.push(context, MaterialPageRoute(builder: (_) {
+    return screen;
+  }));
+}
