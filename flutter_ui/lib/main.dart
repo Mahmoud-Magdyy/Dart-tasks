@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/dod.dart';
-import 'package:flutter_ui/task6/task.dart';
-import 'package:flutter_ui/task7/task1.dart';
-import 'package:flutter_ui/task8/task.dart';
 import 'package:flutter_ui/task9/whatsApp.dart';
+import 'package:flutter_ui/test.dart';
 
 void main(){
-runApp(MyApp());
+runApp(const MyApp());
 
 }
 class MyApp extends StatelessWidget {
@@ -14,9 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return    const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:SafeArea(child: WhastApp()),
+      home:SafeArea(child: Cubb()),
     );
   }
 }

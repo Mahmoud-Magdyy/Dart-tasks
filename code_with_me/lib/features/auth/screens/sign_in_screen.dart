@@ -1,12 +1,8 @@
-import 'dart:ffi';
 import 'package:code_with_me/core/utils/app_color.dart';
 import 'package:code_with_me/core/utils/app_images.dart';
-import 'package:code_with_me/core/utils/app_strings.dart';
 import 'package:code_with_me/core/utils/commons.dart';
-import 'package:code_with_me/features/auth/screens/home_screen.dart';
 import 'package:code_with_me/features/auth/screens/whatssApp.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 
 
@@ -60,11 +56,12 @@ class signIn extends StatelessWidget {
               ),
 
               Expanded(
-                
-                  child: TabBarView(children: [
-                Padding(
-                  padding: EdgeInsets.all(8.0),
+                child: TabBarView(children: [
+                  Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
                   child: Column(
+                    
                     children: [
                       const TextField(
                         decoration: InputDecoration(
@@ -85,7 +82,7 @@ class signIn extends StatelessWidget {
                           hintText: 'password',
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       SizedBox(
@@ -100,63 +97,65 @@ class signIn extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10)),
                               backgroundColor: AppColor.primaryColor,
                             ),
-                            child: Text('sign in')),
+                            child: const Text('sign in')),
                       )
                     ],
                   ),
                 ),
-                 const Column(children: [
-                  SizedBox(height: 10,),
-                   TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                          ),
-                          prefixIcon: Icon(Icons.person,color: AppColor.field,),
-                          
-                          hintText: 'Name',
+                  ),
+                   const Column(children: [
+                SizedBox(height: 10,),
+                 TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
                         ),
-                      ),
-                      SizedBox(height: 6,),
-                   TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                          ),
-                          prefixIcon: Icon(Icons.phone,color: AppColor.field),
+                        prefixIcon: Icon(Icons.person,color: AppColor.field,),
                         
-                          hintText: 'Phone Number',
-                        ),
+                        hintText: 'Name',
                       ),
-                      SizedBox(height: 6,),
-                   TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                          ),
-                          prefixIcon: Icon(Icons.email,color: AppColor.field,),
-                          
-                          hintText: 'Email',
+                    ),
+                    SizedBox(height: 6,),
+                 TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
                         ),
+                        prefixIcon: Icon(Icons.phone,color: AppColor.field),
+                      
+                        hintText: 'Phone Number',
                       ),
-                      SizedBox(height: 6,),
-                   TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                          ),
-                          prefixIcon: Icon(Icons.lock,color: AppColor.field),
-                          suffixIcon: Icon(Icons.visibility_off,color: AppColor.field),
-                          hintText: 'password',
+                    ),
+                    SizedBox(height: 6,),
+                 TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
                         ),
+                        prefixIcon: Icon(Icons.email,color: AppColor.field,),
+                        
+                        hintText: 'Email',
                       ),
-                      SizedBox(height: 6,),
-                   TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                          ),
-                          suffixIcon: Icon(Icons.menu,color: AppColor.field),
-                          hintText: 'Department',
+                    ),
+                    SizedBox(height: 6,),
+                 TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
                         ),
+                        prefixIcon: Icon(Icons.lock,color: AppColor.field),
+                        suffixIcon: Icon(Icons.visibility_off,color: AppColor.field),
+                        hintText: 'password',
                       ),
-                ],)
-              ]))
+                    ),
+                    SizedBox(height: 6,),
+                 TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                        ),
+                        suffixIcon: Icon(Icons.menu,color: AppColor.field),
+                        hintText: 'Department',
+                      ),
+                    ),
+                  ],)
+                ]),
+              )
             ],
           ),
         ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/task6/task.dart';
 
 class WhastApp extends StatelessWidget {
   WhastApp({super.key});
@@ -20,8 +19,8 @@ class WhastApp extends StatelessWidget {
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: Icon(Icons.photo_camera, color: Colors.white),
           backgroundColor: Colors.green,
+          child: const Icon(Icons.photo_camera, color: Colors.white),
         ),
         drawer: const Drawer(
             child: Column(
@@ -70,14 +69,14 @@ class WhastApp extends StatelessWidget {
         ),
         body: TabBarView(children: [
           Column(children: [
-            chats(Colors.red, 'Mohamed Hanafy', Icon(Icons.mic), ' 0:07',
+            chats(Colors.red, 'Mohamed Hanafy', const Icon(Icons.mic), ' 0:07',
                 '1:33 PM',
                 s: ''),
             Sbox,
             chats(
               Colors.grey,
               'Mohamed Mosa',
-              Icon(Icons.check),
+              const Icon(Icons.check),
               ' Photo',
               '1:33 PM',
             ),
@@ -103,7 +102,7 @@ class WhastApp extends StatelessWidget {
             Sbox,
             chats(Colors.black, 'Aahmed Gamal', const Icon(Icons.done_all),
                 'you are a great man', '11:45 AM',
-                s: ''),
+                s: '2'),
             Sbox,
             chats(
                 Colors.blue[300],
@@ -111,7 +110,7 @@ class WhastApp extends StatelessWidget {
                 const Icon(Icons.sentiment_satisfied_alt),
                 ' Sticker',
                 '11:45 AM',
-                s: ''),
+                s: '1'),
             Sbox,
             chats(
               Colors.blue,
@@ -123,7 +122,7 @@ class WhastApp extends StatelessWidget {
           ]),
           Column(
             children: [
-              Padding(padding: EdgeInsets.all(5)),
+              const Padding(padding: EdgeInsets.all(5)),
               const ListTile(
                 leading: CircleAvatar(
                   radius: 25,
@@ -204,18 +203,18 @@ Widget chats(var CircleAvatarcolor, String name, var iconn, String subtitlename,
         ),
         Text(
           trail,
-          style: TextStyle(color: Colors.green),
+          style: const TextStyle(color: Colors.green),
         ),
         s == null
-            ? Text('')
-            : const SizedBox(
+            ? const Text('')
+            :  SizedBox(
                 height: 25,
                 width: 25,
                 child: CircleAvatar(
                     backgroundColor: Colors.green,
                     child: Text(
-                      '1',
-                      style: TextStyle(color: Colors.white),
+                      s,
+                      style: const TextStyle(color: Colors.white),
                     ))),
       ],
     ),
@@ -244,7 +243,7 @@ Widget calls(var Avacolor, String nam, String time, {var colorarrow}) {
         Text(time),
       ],
     ),
-    trailing: Icon(
+    trailing: const Icon(
       Icons.phone,
       color: Colors.green,
     ),
