@@ -1,12 +1,13 @@
 import 'package:bmi_calculate/core/utils/app_colors.dart';
 import 'package:bmi_calculate/cubit/counter_cubit_cubit.dart';
 import 'package:bmi_calculate/cubit/counter_cubit_state.dart';
-import 'package:bmi_calculate/features/auth/components/age_weight.dart';
-import 'package:bmi_calculate/features/auth/components/gender.dart';
-import 'package:bmi_calculate/features/auth/components/height.dart';
 import 'package:bmi_calculate/features/auth/screens/result_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../components/age_weight.dart';
+import '../components/gender.dart';
+import '../components/height.dart';
 
 class CalculateScreen extends StatelessWidget {
   const CalculateScreen({super.key});
@@ -47,6 +48,7 @@ class CalculateScreen extends StatelessWidget {
               //     );
               //   },
               // ),
+              // Text(BlocProvider.of<CounterCubitCubit>(context).gender,style: const TextStyle(color: Colors.white),),
               const SizedBox(
                 height: 20,
               ),

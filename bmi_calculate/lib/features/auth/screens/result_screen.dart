@@ -62,6 +62,9 @@ class ResultScreen extends StatelessWidget {
                         child: Text(getInterpretation(),style:AppStrings.resComment,),
                       ),
 
+                                    
+
+
                     ],
                   );
                 },

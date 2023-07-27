@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
       home: SafeArea(child:
       
       islogin=='true'?
-        CalculateScreen():const SignIn()),
+        const CalculateScreen():const SignIn()),
     );
   }
 }

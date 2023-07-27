@@ -25,13 +25,14 @@ class _HeightState extends State<Height> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
               const Text('HEIGHTcm',style: TextStyle(color: Colors.white,fontSize: 30)),
+              
               const SizedBox(height: 20,),
               BlocBuilder<CounterCubitCubit, CounterCubitState>(
                 builder: (context,state) {
                   return Slider(
                     
-                    min: 100.0,
-                    max: 250.0,
+                    min: 0.0,
+                    max: 300.0,
                     divisions: 100,
                     
                     label:BlocProvider.of<CounterCubitCubit>(context).height.round().toString(),thumbColor: Colors.red,
@@ -39,12 +40,12 @@ class _HeightState extends State<Height> {
 
                     
                     value: BlocProvider.of<CounterCubitCubit>(context).height, onChanged:(val){
-                    
-                        BlocProvider.of<CounterCubitCubit>(context).height=val;
-                    
-                    setState(() {
                       
+                    setState(() {
+                        BlocProvider.of<CounterCubitCubit>(context).height=val;
                     });
+                    
+                    
                     
                     
 

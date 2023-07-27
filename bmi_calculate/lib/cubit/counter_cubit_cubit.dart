@@ -10,6 +10,8 @@ class CounterCubitCubit extends Cubit<CounterCubitState> {
   int age=0;
   int weight=0;
   String s='hoda';
+  
+  
 
   void ageIncremet(){
 
