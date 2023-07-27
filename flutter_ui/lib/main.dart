@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/task9/whatsApp.dart';
-import 'package:flutter_ui/test.dart';
+import 'package:flutter_ui/task11/task1.dart';
 
 void main(){
 runApp(const MyApp());
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return    const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:SafeArea(child: Cubb()),
+      home:SafeArea(child: sharedPr()),
     );
   }
 }
