@@ -27,5 +27,9 @@ void increment(){
   c++;
   emit(CounterIncrement()); 
 }
+void decrement(){
+  c--;
+  emit(CounterDecrement()); 
+}
 
 }

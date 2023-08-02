@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/task11/shared_pr.dart';
+import 'package:flutter_ui/task12/task12.dart';
 
 void main(){
 runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return    const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:SafeArea(child: sharedPr()),
+      home:SafeArea(child: Counter()),
     );
   }
 }
