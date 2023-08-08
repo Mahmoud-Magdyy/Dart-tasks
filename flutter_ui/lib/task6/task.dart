@@ -17,10 +17,10 @@ class BusinessCard extends StatelessWidget {
         title: 'This Is My Business Card',
         home: SafeArea(
             child: Scaffold(
-              backgroundColor: Colors.green,
+              backgroundColor: Colors.teal[300],
           appBar: AppBar(
             title: const Text("Business Card"),
-            backgroundColor: Colors.green[900],
+            backgroundColor: Colors.teal[500],
           ),
           body:  Center(
               child: Column(
@@ -35,7 +35,7 @@ class BusinessCard extends StatelessWidget {
 
                 const CircleAvatar(
                     radius: 100,
-                    backgroundImage: AssetImage('assets/images/IMG_20190210_164529_812.jpg'),
+                    backgroundImage: AssetImage('assets/images/IMG_20220506_194342.jpg'),
                 ),
                 const SizedBox(
                   height: 10,
@@ -73,9 +73,9 @@ class BusinessCard extends StatelessWidget {
 
               
               child: Row(children: [
-                Icon(Icons.email),
-                SizedBox(width: 15,),
-                Text(email,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold))
+                const Icon(Icons.email),
+                const SizedBox(width: 10,),
+                Text(email,style: const TextStyle(fontSize: 17,fontWeight: FontWeight.bold))
                ]
                
                
@@ -97,9 +97,9 @@ class BusinessCard extends StatelessWidget {
               
               ),
               child:  Row(children: [
-                Icon(Icons.phone),
-                SizedBox(width: 15,),
-                Text(phone,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold))
+                const Icon(Icons.phone),
+                const SizedBox(width: 15,),
+                Text(phone,style: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold))
                ]
                
                
@@ -111,29 +111,29 @@ class BusinessCard extends StatelessWidget {
               const SizedBox(
                   height: 10,
                 ),
-               Container(
-               width: 350,
-               height: 50, 
-               padding: const EdgeInsets.all(10.0),
+              //  Container(
+              //  width: 350,
+              //  height: 50, 
+              //  padding: const EdgeInsets.all(10.0),
               
-               decoration: BoxDecoration(
+              //  decoration: BoxDecoration(
                 
-                color: Colors.white,  
+              //   color: Colors.white,  
                 
-               borderRadius: BorderRadius.circular(50)
+              //  borderRadius: BorderRadius.circular(50)
               
-               ),
+              //  ),
 
               
-              child: Row(children: [
-                Icon(Icons.lock),
-                SizedBox(width: 15,),
-                Text(Password,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold))
-               ]
+              // child: Row(children: [
+              //   const Icon(Icons.lock),
+              //   const SizedBox(width: 15,),
+              //   Text(Password,style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold))
+              //  ]
                
                
-               ), 
-              ),
+              //  ), 
+              // ),
               
             ],
             
