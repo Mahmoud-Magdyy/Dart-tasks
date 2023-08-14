@@ -12,24 +12,20 @@ class SignUpScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Padding(
         padding: const EdgeInsets.all(15),
-        child: Column(
-          children: [
-            Expanded(
-                  flex: 3,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/back.jpg"),
-                            fit: BoxFit.cover,
-                            alignment: Alignment.centerLeft
-                            ),
-                            ),
-                  )),
-                  const SizedBox(height: 20,),
-                  Expanded(
-                    flex: 3,
-                    child: 
-                  
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 400,
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assets/images/back.jpg"),
+                        fit: BoxFit.cover,
+                        alignment: Alignment.centerLeft
+                        ),
+                        ),
+              ),
+                    const SizedBox(height: 20,),
                     SingleChildScrollView(
                       child: Column(
                         children: [
@@ -40,7 +36,7 @@ class SignUpScreen extends StatelessWidget {
                               decoration: InputDecoration(
                                 
                                 prefixIconColor: AppColor.buttonColor,
-                                prefixIcon: const Icon(Icons.email),
+                                
                                 hintText: 'Enter  Email',
                                 hintStyle: const TextStyle(color: Colors.white),
                                 enabledBorder: const UnderlineInputBorder(
@@ -61,7 +57,7 @@ class SignUpScreen extends StatelessWidget {
                               decoration: InputDecoration(
                                 
                                 prefixIconColor: AppColor.buttonColor,
-                                prefixIcon: const Icon(Icons.email),
+                                
                                 hintText: 'Enter  Password',
                                 hintStyle: const TextStyle(color: Colors.white),
                                 enabledBorder: const UnderlineInputBorder(
@@ -82,7 +78,7 @@ class SignUpScreen extends StatelessWidget {
                               decoration: InputDecoration(
                                 
                                 prefixIconColor: AppColor.buttonColor,
-                                prefixIcon: const Icon(Icons.email),
+                                
                                 hintText: 'confim Password',
                                 hintStyle: const TextStyle(color: Colors.white),
                                 enabledBorder: const UnderlineInputBorder(
@@ -118,9 +114,9 @@ class SignUpScreen extends StatelessWidget {
                         ],
                       ),
                     )
-                  )
-                  
-          ],
+                    
+            ],
+          ),
         ),
       ),
     );

@@ -1,5 +1,6 @@
-import 'package:coffe_shop/features/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../features/screens/splash_screen.dart';
 
 
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SafeArea(child: 
-     WelcomeScreen()
+     SplashScreen()
       ),
     );
   }

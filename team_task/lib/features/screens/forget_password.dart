@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:team_task/core/utils/app_color.dart';
 import 'package:team_task/core/utils/app_strings.dart';
+import 'package:team_task/features/screens/reset_password.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
@@ -30,6 +31,8 @@ class ForgetPassword extends StatelessWidget {
               TextFormField(
                 decoration: InputDecoration(
                     hintText: 'Email',
+                     
+                    
                     suffixIcon: const Icon(
                       Icons.email_outlined,
                       color: Colors.grey,
@@ -58,7 +61,11 @@ class ForgetPassword extends StatelessWidget {
                     backgroundColor:
                         const MaterialStatePropertyAll(AppColors.primary),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_){
+                      return const ResetPassword();
+                    }));
+                  },
                   child: const Text('Send'),
                 ),
               )

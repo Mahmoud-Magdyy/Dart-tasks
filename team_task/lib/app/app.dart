@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:team_task/features/screens/forget_password.dart';
 
-import '../features/screens/reset_password.dart';
 import '../theme/theme.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         
         debugShowCheckedModeBanner: false,
         theme: getAppTheme(),
-        home: const ResetPassword()
+        home: const ForgetPassword()
     );
   }
 }

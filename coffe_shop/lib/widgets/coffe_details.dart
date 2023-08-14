@@ -40,7 +40,7 @@ class CoffeeDetails extends StatelessWidget {
                 Center(
                   child: Image.asset(
                     "assets/images/$img.png",
-                    width: MediaQuery.of(context).size.width / 2,
+                    width: MediaQuery.of(context).size.width / 2.5,
                   ),
                 ),
                 const SizedBox(

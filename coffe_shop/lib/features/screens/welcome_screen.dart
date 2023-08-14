@@ -1,7 +1,11 @@
 import 'package:coffe_shop/core/utils/app_color.dart';
+import 'package:coffe_shop/features/screens/home_page.dart';
 import 'package:coffe_shop/features/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../core/database/cach/chach_helper.dart';
+import '../../core/service/service_locator.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -44,8 +48,19 @@ class WelcomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 80,),
             InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) =>  LoginScreen()));
+              onTap: ()async{
+                 await serviceLocatir<CacheHelper>()
+                                          .saveData(
+                                              key: 'welcome',
+                                              value: true)
+                                          .then((value) => {
+                                                print('is vailable'),
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (_) =>
+                                                             const LoginScreen()))
+                                              });
               },
               child: Container(
                 width: double.infinity,
