@@ -13,7 +13,10 @@ class GetAlbumm extends StatelessWidget {
         return  Scaffold(
           body:state is GetAlbumLoadingState?const Center(child: CircularProgressIndicator(),): ListView.builder(itemBuilder:(context,i){
             return ListTile(
-              title: Text(BlocProvider.of<ApiCubit>(context).albums[i].title),
+              title: Text(BlocProvider.of<ApiCubit>(context).albums[i].userId.toString(),),
+                  subtitle:Text(BlocProvider.of<ApiCubit>(context).albums[i].id.toString(),) ,
+                  leading: Text(BlocProvider.of<ApiCubit>(context).albums[i].title,),
+                  
             );
           } ),
         );
