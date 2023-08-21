@@ -14,11 +14,38 @@ class AlbumModel {
     required this.id,
     required this.title,
   });
-  factory AlbumModel.fromJson(Map<String, dynamic> jsonData) {
-    return AlbumModel(
-      userId: jsonData["userId"],
+  factory AlbumModel.fromJson(Map<String, dynamic> jsonData){
+    return  AlbumModel(
       id: jsonData["id"],
       title: jsonData["title"],
-    );
+      userId: jsonData["userId"],
+      );
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // factory AlbumModel.fromJson(Map<String, dynamic> jsonData) {
+  //   return AlbumModel(
+  //     userId: jsonData["userId"],
+  //     id: jsonData["id"],
+  //     title: jsonData["title"],
+  //   );
+  // }
 }
